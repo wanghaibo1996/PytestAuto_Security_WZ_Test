@@ -1,0 +1,154 @@
+{
+  "uid" : "aa9ba3a7a6322bbb",
+  "name" : "test_fail[测试：用户名正确, 密码错误->[用户名:admin-密码:admin-预期:用户名或密码错误]]",
+  "fullName" : "TestCases.test_a_loginCase.TestLogin#test_fail[测试：用户名正确, 密码错误->",
+  "historyId" : "e47be5d3cb3d51240e4fc2d6744c7750",
+  "time" : {
+    "start" : 1596519448439,
+    "stop" : 1596519449504,
+    "duration" : 1065
+  },
+  "description" : "登录测试",
+  "descriptionHtml" : "<p>登录测试</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "open_url",
+    "time" : {
+      "start" : 1596519448438,
+      "stop" : 1596519448438,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "ini_pages",
+    "time" : {
+      "start" : 1596519445037,
+      "stop" : 1596519445037,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1596519435704,
+      "stop" : 1596519445037,
+      "duration" : 9333
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "open_url::0",
+    "time" : {
+      "start" : 1596519449506,
+      "stop" : 1596519449554,
+      "duration" : 48
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "ini_pages::0",
+    "time" : {
+      "start" : 1596519451540,
+      "stop" : 1596519451540,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1596519451540,
+      "stop" : 1596519453742,
+      "duration" : 2202
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "loginTest"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases"
+  }, {
+    "name" : "suite",
+    "value" : "test_a_loginCase"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-N8RP418"
+  }, {
+    "name" : "thread",
+    "value" : "17876-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.test_a_loginCase"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'case': '用户名正确, 密码错误', 'username': 'admin', 'password': 'admin', 'expected': '用户名或密码错误'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "loginTest" ]
+  },
+  "source" : "aa9ba3a7a6322bbb.json",
+  "parameterValues" : [ "{'case': '用户名正确, 密码错误', 'username': 'admin', 'password': 'admin', 'expected': '用户名或密码错误'}" ]
+}

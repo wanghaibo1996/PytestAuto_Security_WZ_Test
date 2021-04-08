@@ -1,0 +1,61 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "TestCases.test_a_loginCase",
+    "children" : [ {
+      "name" : "test_login[测试：用户名正确, 密码正确->[用户名:admin-密码:admin2003-预期:文件]]",
+      "uid" : "74d05c2b9a21a0e5",
+      "parentUid" : "df04869ff88e333d1f5743d1c2d48360",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596519445038,
+        "stop" : 1596519448236,
+        "duration" : 3198
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'case': '用户名正确, 密码正确', 'username': 'admin', 'password': 'admin2003', 'expected': '文件'}" ]
+    }, {
+      "name" : "test_fail[测试：用户名正确, 密码错误->[用户名:admin-密码:admin-预期:用户名或密码错误]]",
+      "uid" : "aa9ba3a7a6322bbb",
+      "parentUid" : "df04869ff88e333d1f5743d1c2d48360",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596519448439,
+        "stop" : 1596519449504,
+        "duration" : 1065
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'case': '用户名正确, 密码错误', 'username': 'admin', 'password': 'admin', 'expected': '用户名或密码错误'}" ]
+    }, {
+      "name" : "test_fail[测试：用户名错误, 密码正确->[用户名:admin111-密码:admin2003-预期:用户名或密码错误]]",
+      "uid" : "e87f23c4ce0be733",
+      "parentUid" : "df04869ff88e333d1f5743d1c2d48360",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596519449557,
+        "stop" : 1596519450483,
+        "duration" : 926
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'case': '用户名错误, 密码正确', 'username': 'admin111', 'password': 'admin2003', 'expected': '用户名或密码错误'}" ]
+    }, {
+      "name" : "test_fail[测试：用户名错误, 密码错误->[用户名:admin123-密码:admin-预期:用户名或密码错误]]",
+      "uid" : "ebfd51b39ce6ea0d",
+      "parentUid" : "df04869ff88e333d1f5743d1c2d48360",
+      "status" : "passed",
+      "time" : {
+        "start" : 1596519450530,
+        "stop" : 1596519451494,
+        "duration" : 964
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'case': '用户名错误, 密码错误', 'username': 'admin123', 'password': 'admin', 'expected': '用户名或密码错误'}" ]
+    } ],
+    "uid" : "TestCases.test_a_loginCase"
+  } ]
+}
