@@ -3,7 +3,16 @@ class TacticalManagementData(object):
 
     add_client_address_data = [
         {
-            "case": "客户端地址添加",
+            "case": "客户端地址策略集添加",
             "expected": "ok"
         }
     ]
+
+    del_client_address_data = [
+        {
+            "case": "客户端地址策略集删除",
+            "expected": None
+        }
+    ]
+
+
