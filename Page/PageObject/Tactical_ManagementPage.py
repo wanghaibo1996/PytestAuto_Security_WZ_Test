@@ -31,7 +31,6 @@ class TacticalManagement(BasePage):
     # 确认删除
     ConfirmDeleteBtn = do_conf.get_locators_or_account('TacticalManagementElements', 'ConfirmDeleteBtn')
 
-
     # 创建客户端地址策略集
     def add_client_address_tactical(self):
         # 点击策略管理
@@ -58,6 +57,7 @@ class TacticalManagement(BasePage):
             self.click(*TacticalManagement.saveBtn)
             self.sleep(0.2)
 
+    # 删除客户端地址策略集
     def del_client_address_tactical(self):
         # 点击策略管理
         self.click(*TacticalManagement.TacticalManagementBtn)
@@ -84,6 +84,7 @@ class TacticalManagement(BasePage):
                 self.click(*TacticalManagement.ConfirmDeleteBtn)
                 self.sleep(0.2)
 
+    # 获取客户端地址所有策略集名称
     def get_policy_sets_names(self):
         if self.find_elements(*TacticalManagement.PolicySetsNum):
             return self.get_elements_text(*TacticalManagement.PolicySetsNum)
