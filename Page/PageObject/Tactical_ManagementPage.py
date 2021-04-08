@@ -6,7 +6,6 @@ class TacticalManagement(BasePage):
 
     # 配置文件读取元素
     do_conf = ParseConFile()
-    #
     # 策略管理按钮
     TacticalManagementBtn = do_conf.get_locators_or_account('TacticalManagementElements', 'TacticalManagementBtn')
     # 客户端地址按钮
