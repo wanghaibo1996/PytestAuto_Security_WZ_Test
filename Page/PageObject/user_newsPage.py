@@ -25,3 +25,4 @@ class UserNews(BasePage):
 
     def get_user_list(self):
         return self.get_elements_text(*UserNews.userNames)
+

@@ -205,23 +205,24 @@ import functools
 
 
 """排列组合"""
-from itertools import combinations,permutations
+# from itertools import combinations,permutations
+#
+#
+# a=["开始时间", "结束时间", "数据库关联ID", "同步方向", "同步表名称", "事件类型", "结果状态"]
+#
+#
+#
+# c = list(combinations(a,7)) # 每一种没有重复的
+#
+# # d = list(permutations(a,3)) # 有重复的数据,但顺序不同
+#
+#
+# for i in c:
+#
+#     print(i[0] + ", " + i[1] + ", " + i[2] + ", " + i[3] + ", " + i[4] + ", " + i[5] + ", " + i[6])
 
-
-a=["开始时间", "结束时间", "数据库关联ID", "同步方向", "同步表名称", "事件类型", "结果状态"]
-
-
-
-c = list(combinations(a,7)) # 每一种没有重复的
-
-# d = list(permutations(a,3)) # 有重复的数据,但顺序不同
-
-
-for i in c:
-
-    print(i[0] + ", " + i[1] + ", " + i[2] + ", " + i[3] + ", " + i[4] + ", " + i[5] + ", " + i[6])
-
-
+for i in range(5):
+    print(i)
 
 
 
