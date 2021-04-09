@@ -30,9 +30,16 @@ class TacticalManagement(BasePage):
     PolicySetsDelBtn = do_conf.get_locators_or_account('TacticalManagementElements', 'PolicySetsDelBtn')
     # 确认删除
     ConfirmDeleteBtn = do_conf.get_locators_or_account('TacticalManagementElements', 'ConfirmDeleteBtn')
+    # 名称错误提示信息
+    # inputNameErrorMsg = do_conf.get_locators_or_account('TacticalManagementElements', 'inputNameErrorMsg')
+    # 过滤类型错误提示信息
+    inputTypeErrorMsg = do_conf.get_locators_or_account('TacticalManagementElements', 'inputTypeErrorMsg')
+    # 名称太长提示信息/名称重复
+    nameTooLongErrorMsg = do_conf.get_locators_or_account('TacticalManagementElements', 'nameTooLongErrorMsg')
 
-    # 创建客户端地址策略集
-    def add_client_address_tactical(self):
+
+    # 添加客户端地址策略集不选择过滤类型
+    def add_client_address_tactical_no_select(self, PolicySetsName):
         # 点击策略管理
         self.click(*TacticalManagement.TacticalManagementBtn)
         self.sleep(1)
@@ -42,13 +49,51 @@ class TacticalManagement(BasePage):
         # iframe跳转
         self.switch_to_iframe(0)
         self.sleep(1)
+        # 点击添加
+        self.click(*TacticalManagement.PolicySetsAddBtn)
+        self.sleep(0.2)
+        # 输入名称
+        self.send_keys(*TacticalManagement.PolicySetsNameInputBtn, PolicySetsName)
+        self.sleep(0.2)
+        # 选择黑/白名单
+        # self.click(*TacticalManagement.blackBtn)
+        self.sleep(0.2)
+        # 保存
+        self.click(*TacticalManagement.saveBtn)
+        self.sleep(0.2)
 
-        for i in range(1000):
+    # 创建客户端地址策略集
+    def add_client_address_tactical(self, PolicySetsName, num):
+        # 点击策略管理
+        self.click(*TacticalManagement.TacticalManagementBtn)
+        self.sleep(0.5)
+        # 点击客户端地址
+        self.click(*TacticalManagement.clientAddressBtn)
+        self.sleep(0.5)
+        # iframe跳转
+        self.switch_to_iframe(0)
+        self.sleep(0.5)
+
+        if num > 1:
+            for i in range(num):
+                # 点击添加
+                self.click(*TacticalManagement.PolicySetsAddBtn)
+                self.sleep(0.2)
+                # 输入名称
+                self.send_keys(*TacticalManagement.PolicySetsNameInputBtn, "策略集" + str(i+1))
+                self.sleep(0.2)
+                # 选择黑/白名单
+                self.click(*TacticalManagement.blackBtn)
+                self.sleep(0.2)
+                # 保存
+                self.click(*TacticalManagement.saveBtn)
+                self.sleep(0.2)
+        else:
             # 点击添加
             self.click(*TacticalManagement.PolicySetsAddBtn)
             self.sleep(0.2)
             # 输入名称
-            self.send_keys(*TacticalManagement.PolicySetsNameInputBtn, "策略集" + str(i))
+            self.send_keys(*TacticalManagement.PolicySetsNameInputBtn, PolicySetsName)
             self.sleep(0.2)
             # 选择黑/白名单
             self.click(*TacticalManagement.blackBtn)
@@ -91,11 +136,13 @@ class TacticalManagement(BasePage):
         else:
             return None
 
+    # 获取添加客户端地址策略集过滤类型错误提示信息
+    def get_type_error_msg(self):
+        return self.get_element_text(*TacticalManagement.inputTypeErrorMsg)
 
-
-
-
-
+    # 名称太长或名称重复提示信息
+    def get_name_too_long_error_msg(self):
+        return self.get_element_text(*TacticalManagement.nameTooLongErrorMsg)
 
 
 
